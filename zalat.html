@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .button {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="pressButton" class="button">Don't Press</button>
+    <div id="hiddenText" class="hidden">كسم محمد الجعار</div>
+
+    <script>
+        document.getElementById("pressButton").onclick = function() {
+            document.getElementById("hiddenText").classList.remove("hidden");
+        };
+    </script>
+</body>
+</html>
